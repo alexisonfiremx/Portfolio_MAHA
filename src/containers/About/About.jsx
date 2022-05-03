@@ -4,47 +4,86 @@ import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
 import { urlFor, client } from '../../client';
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 
 const About = () => {
-  const [abouts, setAbouts] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [testimonials, setTestimonials] = useState([]);
+  const [brands, setBrands] = useState([]);
 
-  // const aboutss = [
-  //   {title: 'Web Development', description: 'I am a good web developer', imgUrl: images.about01},
-  //   {title: 'Frontend Development', description: 'I am a good web developer', imgUrl: images.about02},
-  //   {title: 'Backend Development', description: 'I am a good web developer', imgUrl: images.about03},
-  //   {title: 'PERN Stack', description: 'I am a good web developer', imgUrl: images.about04},
-  // ]
+  const handleClick = (index) => {
+    setCurrentIndex(index);
+  };
 
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
+    const query = '*[_type == "testimonials"]';
+    const brandsQuery = '*[_type == "brands"]';
 
     client.fetch(query).then((data) => {
-      setAbouts(data);
+      setTestimonials(data);
+    });
+
+    client.fetch(brandsQuery).then((data) => {
+      setBrands(data);
     });
   }, []);
 
-  return (
-    <>
-      <h2 className="head-text">Fullstack <span>capable</span><br />Frontend <span>addicted</span></h2>
 
-      <div className="app__profiles">
-        {abouts.map((about, index) => (
-          <motion.div
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: 'tween' }}
-            className="app__profile-item"
-            key={about.title + index}
-          >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
-            {/* <img src={about.imgUrl} alt={about.title} /> */}
-            <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
-            <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
-          </motion.div>
-        ))}
-      </div>
-    </>
-  );
+
+
+
+
+
+return (
+  <>
+    <h2 className="head-text ">
+  <strong className='stroke glitch' data-glitch="Fullstack">Fullstack</strong>
+  <span className='glow'> capable</span>
+  <br />
+  <strong className='stroke glitch' data-glitch="Frontend">Frontend</strong>
+  <span className='glow'> addicted</span>
+</h2>
+    <br/>
+    <br/>
+
+    {testimonials.length && (
+      <>
+        <div className="app__testimonial-item app__flex">
+          <img src={urlFor(testimonials[currentIndex].imageurl)} alt={testimonials[currentIndex].name} />
+          <div className="app__testimonial-content">
+            <p className="p-text">{testimonials[currentIndex].feedback}</p>
+            <div>
+              <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
+              <h5 className="p-text">{testimonials[currentIndex].company}</h5>
+            </div>
+          </div>
+        </div>
+
+        <div className="app__testimonial-btns app__flex">
+          <div className="app__flex" onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
+            <HiChevronLeft />
+          </div>
+
+          <div className="app__flex" onClick={() => handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}>
+            <HiChevronRight />
+          </div>
+        </div>
+      </>
+    )}
+
+    <div className="app__testimonial-brands app__flex">
+      {brands.map((brand) => (
+        <motion.div
+          whileInView={{ opacity: [0, 1] }}
+          transition={{ duration: 0.5, type: 'tween' }}
+          key={brand._id}
+        >
+          <img src={urlFor(brand.imgUrl)} alt={brand.name} />
+        </motion.div>
+      ))}
+    </div>
+  </>
+);
 };
 
 export default AppWrap(

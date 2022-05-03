@@ -1,72 +1,46 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './Header.scss';
-import { motion } from 'framer-motion';
-import { images } from '../../constants';
 import { AppWrap } from '../../wrapper';
-
-const scaleVariants = {
-  whileInView: {
-    scale: [0, 1],
-    opacity: [0, 1],
-    transition: {
-      duration: 1,
-      ease: 'easeInOut',
-    },
-  },
-};
+import gsap from 'gsap';
+import video from '../../assets/final_01.mp4'
 
 const Header = () => {
+
+  const timeline = gsap.timeline();
+
+  useEffect(() => {
+    const name = document.querySelector(".animate-name")
+    const subtitle = document.querySelectorAll(".animate-subtitle")
+    timeline.from(name,{
+        opacity: 0,
+        duration: 6.5,
+        ease: "power4.inOut(1, 0.5)",
+        y: "200%",
+        stagger: 4,
+    } ,"-=.5")
+    .from(subtitle,{
+      opacity: 0,
+      duration: 1.1,
+      ease: "power2.inOut",
+      y: "200%",
+      stagger: 0.7,
+  },"-=2.5")
+})
+
+
   return (
-    <div className='app__header app__flex'>
-      <motion.div
-        whileInView={{x: [-100, 0], opacity: [0, 1]}}
-        transition={{duration: 0.5}}
-        className='app__header-info'
-      >
-        <div className='app__header-badge'>
-          <div className='badge-cpm app__flex'>
-            <span>👋</span>
-            <div style={{marginLeft: 20}}>
-              <p className='p-text'>Hello I am</p>
-              <h1 className='head-text'>Marcos</h1>
+    <div className='app__header app__flex-landing'>
+            <video className="video" src={video} autoPlay loop muted />
+      <div className='app__flex-landing'>
+              <h1 className='head-text-landing stroke glitch animate-name' data-glitch="Marcos Herrera">Marcos Herrera</h1>
+      </div>
+            <div className='app__flex-landing'>
+              <p className='p-text-landing animate-subtitle'><span className='glow-landing'>Slicker than your average </span></p>
+              <p className='p-text-landing animate-subtitle'><span  style={{color: '#313bac'}}> web developer</span></p>
             </div>
-          </div>
-
-            <div className='tag-cmp app__flex'>
-              <p className='p-text'>Fullstack Web Developer</p>
-              <p className='p-text'>based in 🇲🇽</p>
-            </div>
-        </div>
-      </motion.div>
-
-      <motion.div         
-        whileInView={{opacity: [0, 1]}}
-        transition={{duration: 0.5, delayChildren: 0.5}}
-        className='app__header-img'
-      >
-        <img src={images.profile} alt='profile_bg' />
-        <motion.img
-          whileInView={{scale: [ 0,1 ]}}
-          transition={{duration: 1, ease: 'easeInOut'}}
-          src={images.circle}
-          alt='profile_circle'
-          className='overlay_circle'
-        />
-      </motion.div>
-
-      <motion.div
-      variants={scaleVariants}
-      whileInView={scaleVariants.whileInView}
-      className="app__header-circles"
-      >
-      {[images.javascript, images.react, images.redux].map((circle, index) => (
-        <div className="circle-cmp app__flex" key={`circle-${index}`}>
-          <img src={circle} alt="profile_bg" />
-        </div>
-      ))}
-    </motion.div>
     </div>
   )
 }
 
 export default AppWrap(Header, 'home')
+

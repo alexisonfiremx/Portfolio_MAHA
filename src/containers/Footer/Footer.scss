@@ -1,10 +1,11 @@
 .app__footer {
     flex: 1;
-    width: 100%;
+    width: 80%;
     flex-direction: column;
 
     @media screen and (max-width: 768px) {
     flex-direction: column;
+    width: 80%;
     }
 }
 
@@ -31,6 +32,8 @@
 
     transition: all 0.3s ease-in-out;
     
+
+
     img {
         width: 40px;
         height: 40px;
@@ -50,12 +53,12 @@
     }
 
     @media screen and (max-width: 450px) {
-        width: 100%;
+        width: 80%;
     }
     }
 
     @media screen and (max-width: 768px) {
-    width: 100%;
+    width: 80%;
     }
 }
 

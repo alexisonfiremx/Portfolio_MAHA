@@ -1,7 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
+@font-face {
+    font-family: 'Monument-Bold';
+    src: url(./fonts/MonumentExtended-Bold.otf);
+}
+@font-face {
+    font-family: 'Monument-Regular';
+    src: url(./fonts/MonumentExtended-Regular.otf);
+}
+
 :root {
     --font-base: "DM Sans", sans-serif;
+    --font-header: "Monument-Bold", sans-serif;
+    --font-text: "Monument-Regular", sans-serif;
 
     --primary-color: #edf2f8;
     --secondary-color: #313bac;
@@ -10,7 +21,7 @@
     --gray-color: #6b7688;
     --brown-color: #46364a;
     --white-color: #ffffff;
-    --purple-color: rgb(33, 32, 57);
+    --purple-color: #212039;
     --blue-color: rgb(36, 230, 197);
     --dark-color: rgba(0, 0, 0, 0.3);
     --darkyBg-color: #2b294b;

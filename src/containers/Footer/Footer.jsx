@@ -37,15 +37,18 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Interested? Let's talk</h2>
+      <h2 className="head-text">
+        <strong className='stroke glitch' data-glitch="Hooked?">Hooked?</strong>
+        <span className='glow'> Let's talk</span>
+      </h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:hello@micael.com" className="p-text">contact@marcosheag.com</a>
+          <a href="mailto:hello@micael.com" className="p-text">hello@marcosheag.com</a>
         </div>
         <div className="app__footer-card">
-          <img style={{ height: '25px', width: '25px', margin: '7.5px'}} src={images.mobile} alt="phone" />
+          <img  src={images.mobile} alt="phone" />
           <a href="tel:+1 (123) 456-7890" className="p-text">WhatsApp me</a>
         </div>
       </div>

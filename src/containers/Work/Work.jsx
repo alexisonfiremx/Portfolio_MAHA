@@ -39,7 +39,10 @@ const Work = () => {
 
   return (
       <>
-      <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
+      <h2 className="head-text">
+        <strong className='stroke glitch' data-glitch="Blood,">Blood,</strong>
+        <span className='glow'> Sweat & Code</span>
+      </h2>
 
       <div className="app__work-filter">
         {[ 'Frontend', 'Fullstack', 'All'].map((item, index) => (
@@ -65,9 +68,9 @@ const Work = () => {
             >
               <img src={urlFor(work.imgUrl)} alt={work.name} />
 
-              <motion.div
-                whileHover={{ opacity: [0, 1] }}
-                transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
+              <div
+                // whileHover={{ opacity: [0, 1] }}
+                // transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
               >
                 <a href={work.projectLink} target="_blank" rel="noreferrer">
@@ -91,7 +94,7 @@ const Work = () => {
                     <AiFillGithub />
                   </motion.div>
                 </a>
-              </motion.div>
+              </div>
             </div>
 
             <div className="app__work-content app__flex">
