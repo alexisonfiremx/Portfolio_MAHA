@@ -43,7 +43,7 @@ const Navbar = () => {
                 <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
         <ul className={click ? 'app__navbar-links nav-menu active' : 'app__navbar-links nav-menu'}>
-            {['home', 'about', 'work', 'skills', 'contact'].map(item => (
+            {['home', 'about', 'work', 'skills', 'whereabouts', 'contact'].map(item => (
                 <li className='app__flex p-text' key={`link-${item}`}>
                     <div />
                     <a href={`#${item}`}>{item}</a>
@@ -77,7 +77,7 @@ const Navbar = () => {
                     >
                         <HiX onClick={() => setToggle(false)} />
                         <ul>
-                        {['home', 'about', 'work', 'skills', 'contact'].map(item => (
+                        {['home', 'about', 'work', 'skills', 'whereabouts', 'contact'].map(item => (
                             <li key={item}>
                                 <a href={`#${item}`} onClick={() => setToggle(false)} >
                                     {item}

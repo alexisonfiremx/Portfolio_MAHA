@@ -1,0 +1,36 @@
+.cursor__styles{
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0.36vw;
+    height: 0.36vw;
+    padding: 1.5vw;
+    border-radius: 100%;
+    background-color: var(--black-color);
+    border: 0.1vw solid var(--black-color);
+    mix-blend-mode: difference;
+    z-index: 20;
+    @media (hover: none) and (pointer: coarse), (max-width: 500px){
+        display: none;
+    }
+}
+
+.pointer__styles{
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0.9vw;
+    height: 0.9vw;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    &.on-focus {
+        background-color: transparent;
+    }
+    @media (hover: none) and (pointer: coarse), (max-width: 500px){
+        display: none;
+    }
+}

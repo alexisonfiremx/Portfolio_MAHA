@@ -1,87 +1,66 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-// import { images } from '../../constants';
+import React, { useEffect, useRef, useState } from 'react';
+
 import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
-import { urlFor, client } from '../../client';
-import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import lottie from 'lottie-web';
 
 const About = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [testimonials, setTestimonials] = useState([]);
-  const [brands, setBrands] = useState([]);
 
-  const handleClick = (index) => {
-    setCurrentIndex(index);
-  };
+  const container = useRef(null)
+  const [hovered, setHovered] = useState(false);
+  const toggleHover = () => setHovered(!hovered);
+  const [hovered2, setHovered2] = useState(false);
+  const toggleHover2 = () => setHovered2(!hovered2);
 
   useEffect(() => {
-    const query = '*[_type == "testimonials"]';
-    const brandsQuery = '*[_type == "brands"]';
 
-    client.fetch(query).then((data) => {
-      setTestimonials(data);
-    });
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: require('../../assets/working_svg.json')
+    })
 
-    client.fetch(brandsQuery).then((data) => {
-      setBrands(data);
-    });
   }, []);
-
-
-
-
-
-
 
 return (
   <>
     <h2 className="head-text ">
-  <strong className='stroke glitch' data-glitch="Fullstack">Fullstack</strong>
-  <span className='glow'> capable</span>
-  <br />
-  <strong className='stroke glitch' data-glitch="Frontend">Frontend</strong>
-  <span className='glow'> addicted</span>
-</h2>
-    <br/>
-    <br/>
+      <strong className='stroke glitch' data-glitch="Fullstack">Fullstack</strong>
+      <span className='glow'> capable,</span>
+      <br />
+      <strong className='stroke glitch' data-glitch="Frontend">Frontend</strong>
+      <span className='glow'> addicted</span>
+    </h2>
 
-    {testimonials.length && (
-      <>
-        <div className="app__testimonial-item app__flex">
-          <img src={urlFor(testimonials[currentIndex].imageurl)} alt={testimonials[currentIndex].name} />
-          <div className="app__testimonial-content">
-            <p className="p-text">{testimonials[currentIndex].feedback}</p>
-            <div>
-              <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
-              <h5 className="p-text">{testimonials[currentIndex].company}</h5>
-            </div>
-          </div>
-        </div>
-
-        <div className="app__testimonial-btns app__flex">
-          <div className="app__flex" onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
-            <HiChevronLeft />
-          </div>
-
-          <div className="app__flex" onClick={() => handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}>
-            <HiChevronRight />
-          </div>
-        </div>
-      </>
-    )}
-
-    <div className="app__testimonial-brands app__flex">
-      {brands.map((brand) => (
-        <motion.div
-          whileInView={{ opacity: [0, 1] }}
-          transition={{ duration: 0.5, type: 'tween' }}
-          key={brand._id}
+    <div className="app__about-item app__flex">
+      <div className="app__about-content">
+          <p 
+              className={hovered2 ? 'p-text bouncing' : 'p-text'}
+              onMouseEnter={toggleHover2}
+              onMouseLeave={toggleHover2}
+          >
+        I’m an ambitious web developer with fullstack capabilities, with a preference
+        to frontend development, looking for a role in
+        established IT company with the opportunity to work with the latest
+        technologies on challenging and diverse projects.
+          </p>
+        <p 
+              className={hovered ? 'p-text bouncing' : 'p-text'}
+              onMouseEnter={toggleHover}
+              onMouseLeave={toggleHover}
         >
-          <img src={urlFor(brand.imgUrl)} alt={brand.name} />
-        </motion.div>
-      ))}
+        I'm quietly confident, naturally curious, and perpetually working on
+        improving my chops one task at a time.
+        </p>
+      </div>
+      <div className="container" ref={container} ></div>
+      
     </div>
+
+
+
   </>
 );
 };

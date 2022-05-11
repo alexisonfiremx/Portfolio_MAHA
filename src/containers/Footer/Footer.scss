@@ -3,9 +3,11 @@
     width: 80%;
     flex-direction: column;
 
+
     @media screen and (max-width: 768px) {
     flex-direction: column;
     width: 80%;
+    font-size: 1rem;
     }
 }
 
@@ -72,19 +74,19 @@
 }
 
 .app__footer-form {
+    
     width: 60%;
     flex-direction: column;
     margin: 1rem 2rem;
 
     div {
     width: 100%;
-
     margin: 0.75rem 0;
     border-radius: 10px;
     cursor: pointer;
     // background-color: var(--dark-color);
-
     transition: all 0.3s ease-in-out;
+
 
     input,
     textarea {
@@ -113,7 +115,6 @@
     border-radius: 10px;
     border: 1px solid var(--secondary-color);
     background-color: var(--secondary-color);
-
     font-weight: 500;
     color: var(--white-color);
     outline: none;
@@ -135,3 +136,41 @@
     margin: 1rem 0;
     }
 }
+
+.form{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // flex: 1;
+    width: 80%;
+    flex-direction: column;
+
+    h5{
+        font-size: 1.75rem;
+        letter-spacing: 0.05rem;
+
+        @media screen and (max-width: 768px) {
+            font-size: 1.25rem;
+            }
+
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }

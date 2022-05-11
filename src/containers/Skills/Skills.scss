@@ -41,20 +41,29 @@
 
     transition: all 0.3s ease-in-out;
 
+
+    
     div {
     width: 90px;
     height: 90px;
     border-radius: 50%;
     background-color: var(--dark-color);
+    
 
     img {
         width: 50%;
         height: 50%;
+        
+        
     }
 
     &:hover {
         background-color: var(--secondary-color);
         box-shadow: 0 0 25px rgba(65,53,110,1);
+        transition: 0.7s;
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
     }
 
     @media screen and (min-width: 2000px) {

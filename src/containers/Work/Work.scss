@@ -79,7 +79,7 @@
 
 .app__work-img {
     width: 100%;
-    height: 230px;
+    // height: 230px;
 
     position: relative;
 
@@ -160,4 +160,43 @@
     background-color: #111925;
     top: -25px;
     }
+}
+
+
+.skills-tooltip {
+    max-width: 300px !important;
+    background-color: #111925 !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 5px !important;
+    padding: 1rem !important;
+    color: var(--primary-color) !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+    opacity: 1 !important;
+
+    @media screen and (min-width: 2000px) {
+    font-size: 1.75rem !important;
+    max-width: 500px !important;
+    line-height: 2 !important;
+    }
+}
+
+
+.info__icon{
+    display: inline-block;
+    position: relative;
+    margin-left: 0.5rem;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+}
+
+
+.subtitle{
+        color: var(--secondary-color);
+        font-weight: 800;
+}
+
+ul {
+    list-style-type: none;
 }

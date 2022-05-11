@@ -9,8 +9,8 @@ return (
     <Component />
 
     <div className="copyright">
-        <p className="p-text">@2022 MARCOS H.</p>
-        <p className="p-text">All rights reserved</p>
+        <p className="p-text">Made with 💜</p>
+        <p className="p-text">by Marcos H.</p>
     </div>
     </div>
     <NavigationDots active={idName} />
