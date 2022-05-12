@@ -4,7 +4,6 @@ import { images } from '../../constants';
 import {HiMenuAlt4, HiX} from 'react-icons/hi';
 import {motion} from 'framer-motion';
 import Dropdown from '../Dropdown/Dropdown';
-import { Link } from 'react-router-dom';
 import {IoMdArrowDropdown} from 'react-icons/io';
 import { SidebarData } from '../SidebarDropdown/SidebarData';
 import SubMenu from '../SidebarDropdown/SubMenu';

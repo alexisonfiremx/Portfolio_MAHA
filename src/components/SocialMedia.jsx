@@ -2,7 +2,6 @@ import React from 'react';
 import {BsTwitter} from 'react-icons/bs';
 import { FaLinkedinIn} from 'react-icons/fa';
 import {FiGithub} from 'react-icons/fi';
-import { Link } from 'react-router-dom'; 
 
 const SocialMedia = () => {
   return (

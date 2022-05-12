@@ -37,7 +37,6 @@ const Work = () => {
     }, 500);
   };
 
-  console.log(filterWork)
 
   return (
       <>
