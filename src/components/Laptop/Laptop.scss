@@ -1,0 +1,40 @@
+.laptop__size {
+    display: block;
+    width: 550px;
+    height: 450px;
+
+    @media screen and (max-width: 700px) {
+        width: 400px;
+        height: 300px;
+        
+
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 350px;
+        height: 250px;
+
+    }
+
+    @media screen and (max-width: 400px) {
+        width: 300px;
+        height: 200px;
+
+    }
+
+}
+
+
+.for__title{
+        
+    transform: translate3d(0%, 200px, 0px);
+
+
+        @media screen and (max-width: 700px) {
+            transform: translate3d(0%, 100px, 0px);
+    
+        }
+
+
+
+}

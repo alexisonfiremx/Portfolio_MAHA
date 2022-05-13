@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
 import lottie from 'lottie-web';
+import { Laptop } from '../../components';
 
 const About = () => {
 
@@ -42,7 +43,7 @@ return (
               onMouseLeave={toggleHover2}
           >
         I’m an ambitious web developer with fullstack capabilities, with a preference
-        to frontend development, looking for a role in
+        for frontend development, looking for a role in
         established IT company with the opportunity to work with the latest
         technologies on challenging and diverse projects.
           </p>
@@ -55,7 +56,8 @@ return (
         improving my chops one task at a time.
         </p>
       </div>
-      <div className="container" ref={container} ></div>
+      {/* <div className="container" ref={container} ></div> */}
+      <Laptop />
       
     </div>
 

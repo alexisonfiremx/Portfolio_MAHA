@@ -128,7 +128,7 @@
     font-size: 4.75rem;
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 900px) {
     font-size: 3.0rem;
     }
     @media screen and (max-width: 380px) {
@@ -168,8 +168,8 @@
         font-size: 1.25rem;
         }
 
-        @media screen and (min-width: 700px) {
-            font-size: 1.5rem;
+        @media screen and (min-width: 900px) {
+            font-size: 2rem;
             }
 
     
@@ -344,7 +344,7 @@
 
 @media only screen and (max-width: 550px) {
 	.glitch {
-		font-size: 2rem;
+		font-size: 2.0rem;
 	}
 
     .head-text span {
