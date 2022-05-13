@@ -1,8 +1,8 @@
 import React from 'react';
 import * as IoIcons from 'react-icons/io';
 import * as RiIcons from 'react-icons/ri';
-import CV_ESP from '../../media/CV_ESP.pdf'
-import RESUME_ENG from '../../media/RESUME_ENG.pdf'
+import CV_ESP from '../../media/CV_ESP_v2.01.pdf'
+import RESUME_ENG from '../../media/CV_ENG_v2.01.pdf'
 
 export const SidebarData = [
     {
