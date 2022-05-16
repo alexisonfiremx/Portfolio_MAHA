@@ -1,6 +1,15 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/lavaboy1738/LGN/d7dda7c93fe8496e50b7f4e966756838d56fcd85/src/assets/images/logo.svg" width="100" />
+  <img alt="Logo" src="https://res.cloudinary.com/djbiam1gm/image/upload/v1652728625/Portfolio/MH_blue.png" width="100" />
 </div>
+<h1 align="center">
+  marcosheag.com
+</h1>
+<p align="center">
+  My first portfolio <a href="https://ronniefeng.com" target="_blank">marcosheag.com</a> built with <a href="https://reactjs.org/" target="_blank">React</a> and hosted with <a href="https://www.hostgator.com/" target="_blank">Hostgator</a>
+</p>
+
+
+![demo](https://res.cloudinary.com/djbiam1gm/image/upload/v1652728470/Portfolio/Porfolio_v2.01.gif)
 
 
 # Getting Started with Create React App
