@@ -5,7 +5,7 @@
   marcosheag.com
 </h1>
 <p align="center">
-  My first portfolio <a href="https://ronniefeng.com" target="_blank">marcosheag.com</a> built with <a href="https://reactjs.org/" target="_blank">React</a> and hosted with <a href="https://www.hostgator.com/" target="_blank">Hostgator</a>
+  My portfolio <a href="https://marcosheag.com" target="_blank">marcosheag.com</a> built with <a href="https://reactjs.org/" target="_blank">React</a> and hosted with <a href="https://www.hostgator.com/" target="_blank">Hostgator</a>
 </p>
 
 
