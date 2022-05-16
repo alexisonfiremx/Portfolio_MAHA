@@ -22,7 +22,7 @@ const Whereabouts = () => {
   return (
     <>
       <div className='app__whereabouts'>
-        <h2 className="head-text">
+        <h2 className="head-text noselect">
           <strong className='stroke glitch' data-glitch="Where">Where</strong>
           <span className='glow'>abouts</span>
         </h2>

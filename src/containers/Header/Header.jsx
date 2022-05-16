@@ -39,7 +39,7 @@ const Header = () => {
     <div className='app__header app__flex-landing'>
             <video className="video" src={video} autoPlay loop muted />
       <div className='app__flex-landing'>
-              <h1 className='head-text-landing stroke glitch animate-name' data-glitch="Marcos Herrera">Marcos Herrera</h1>
+              <h1 className='head-text-landing stroke glitch animate-name noselect' data-glitch="Marcos Herrera">Marcos Herrera</h1>
       </div>
       <div className='app__flex-landing'>
         <p 
@@ -47,13 +47,13 @@ const Header = () => {
           onMouseEnter={toggleHover}
           onMouseLeave={toggleHover}
         >
-          <span className='glow-landing bouncing'>Slicker than your average </span></p>
+          <span className='glow-landing bouncing noselect'>Slicker than your average </span></p>
         <p
           className={hovered2 ? 'p-text-landing animate-subtitle bouncing' : 'p-text-landing animate-subtitle'}
           onMouseEnter={toggleHover2}
           onMouseLeave={toggleHover2}
         >
-          <span  style={{color: '#313bac'}}> web developer</span></p>
+          <span className='noselect' style={{color: '#313bac'}}> web developer</span></p>
       </div>
 
     </div>

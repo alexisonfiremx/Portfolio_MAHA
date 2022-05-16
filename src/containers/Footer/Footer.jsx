@@ -74,7 +74,7 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">
+      <h2 className="head-text noselect">
         <strong className='stroke glitch' data-glitch="Hooked?">Hooked?</strong>
         <span className='glow'> Let's talk</span>
       </h2>

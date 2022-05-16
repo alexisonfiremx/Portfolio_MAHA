@@ -40,7 +40,7 @@ const Work = () => {
 
   return (
       <>
-      <h2 className="head-text">
+      <h2 className="head-text noselect">
         <strong className='stroke glitch' data-glitch="Blood,">Blood,</strong>
         <span className='glow'> Sweat & Code</span>
       </h2>

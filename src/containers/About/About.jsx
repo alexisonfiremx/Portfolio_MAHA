@@ -27,7 +27,7 @@ const About = () => {
 
 return (
   <>
-    <h2 className="head-text ">
+    <h2 className="head-text noselect">
       <strong className='stroke glitch' data-glitch="Fullstack">Fullstack</strong>
       <span className='glow'> capable,</span>
       <br />

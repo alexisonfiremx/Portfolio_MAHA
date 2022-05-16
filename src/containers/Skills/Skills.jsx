@@ -25,7 +25,7 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">
+      <h2 className="head-text noselect">
         <strong className='stroke glitch' data-glitch="Skills &">Skills &</strong>
         <span className='glow'> Experience</span>
       </h2>
