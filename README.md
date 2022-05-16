@@ -17,8 +17,7 @@
 ⚡️ Modern UI Design + Animations\
 ⚡️ One Page Layout\
 ⚡️ Styled with SCSS\
-⚡️ Fully Responsive\
-⚡️ Valid HTML5 & CSS3\
+⚡️ Fully Responsive
 
 To view: **[click here](https://marcosheag.com)**
 
@@ -44,16 +43,16 @@ From your command line, first clone Simplefolio:
 
 ```bash
 # Clone the repository
-$ git clone https://github.com/cobidev/simplefolio
+$ git clone https://github.com/alexisonfiremx/Portfolio_MAHA.git
 
 # Move into the repository
-$ cd simplefolio
+$ cd Portfolio_MAHA
 
 # Remove the current origin repository
 $ git remote remove origin
 ```
 
-After that, you can install the dependencies either using NPM.
+After that, you can install the dependencies using NPM.
 
 Simply run the below commands.
 
@@ -87,16 +86,33 @@ I highly recommend to use [Hostgator](https://www.hostgator.mx/) because it is s
 ## Technologies used 🛠️
 
 - [Sass](https://sass-lang.com/documentation) - CSS extension language
-- [React Icons](https://scrollrevealjs.org/) - JavaScript library
-- [Tilt.js](https://gijsroge.github.io/tilt.js/) - JavaScript tiny parallax library
+- [React Icons](https://react-icons.github.io/react-icons/) - Library for icons
+- [React Map GL](https://visgl.github.io/react-map-gl/docs) - Suite of React components for Mapbox GL JS library.
+- [React Tooltip](https://github.com/wwayne/react-tooltip#readme) - Library that provides a tooltip component.
+- [Email JS](https://www.emailjs.com/docs/introduction/how-does-emailjs-work/) - Javascript library that allows to send emails directly from your client-side.
+- [Framer Motion](https://www.framer.com/docs/) - Open source, production-ready motion library for React
+- [GSAP](https://www.framer.com/docs/) - Library to create robust timeline based animations.
+- [Lottie web](http://airbnb.io/lottie/#/) - Library that parses Adobe After Effects animations exported as json 
+
+
+
 
 ## Authors
 
 - **Marcos Herrera** - [https://github.com/alexisonfiremx](https://github.com/alexisonfiremx)
 
 
-## Acknowledgments 🎁
+## 👏 Credits
 
-
-
+These are the websites from where I drew my inspirations 
+<br/>
+Cursor, animations:
+<a href="https://ronniefeng.com/" target="_blank">Ronnie Feng</a>
+<br/>
+Map: 
+<a href="https://jacekjeznach.com/" target="_blank">Jack Jeznach</a>
+<br/>
+Sections: Portfolio, Skills & About
+<a href="https://micael-portfolio.netlify.app/" target="_blank">JavaScript Mastery</a>
+<br/>
 
