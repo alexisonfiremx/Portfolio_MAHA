@@ -1,3 +1,8 @@
+<div align="center">
+  <img alt="Logo" src="https://raw.githubusercontent.com/lavaboy1738/LGN/d7dda7c93fe8496e50b7f4e966756838d56fcd85/src/assets/images/logo.svg" width="100" />
+</div>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
